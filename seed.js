@@ -12,33 +12,30 @@ async function seed() {
   // **color: {type: String, required: true},
   // **spayNeuter: {type: Boolean, required: true},
   // **location: {type: String, required: true}
-// Update Book.create with relevant info
+  // Update Book.create with relevant info
   await Book.create({
-    name: 'Ronald',
-    color: 'Orange Tabby',
-    spayNeuter: true,
-    location: 'Seattle'
+    title: 'The Hobbit',
+    description: 'They have taken the hobbits to Isenguard',
+    status: 'available'
   });
 
-  console.log('Ronald was created!');
+  console.log('The Hobbit was created!');
 
   await Book.create({
-    name: 'Karl',
-    color: 'Black and White Tabby',
-    spayNeuter: true,
-    location: 'Rainbow Bridge'
+    title: 'The Alchemist',
+    description: 'Maktub',
+    status: 'available',
   });
 
-  console.log('Karl was created');
+  console.log('The Alchemist was created');
 
   await Book.create({
-    name: 'Victor',
-    color: 'Grey Tabby',
-    spayNeuter: true,
-    location: 'Rainbow Bridge'
+    title: 'Romeo and Juliet',
+    description: 'Romeo and Juliet are deceased',
+    status: 'unavailable',
   });
-  
-  console.log('Victor was created');
+
+  console.log('Romeo and Juliet was created');
 
   mongoose.disconnect();
 }
