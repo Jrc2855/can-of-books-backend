@@ -1,11 +1,28 @@
-# Start your own "Can of Books" App
+# Project Name
 
-This repository has starter code to begin work on creating your own online bookshelf.
+**Author**: John Chavez, Rafael Aldana
+**Version**: 1.0.0 
 
-## What can books do?
+## Overview
+To build a web application that provides users with a large database of impactful books.
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+## Getting Started
+To access the code for this application, clone the repo down from github.
 
-## Use this template
+## Architecture
+This application utilizes JavaScript, HTML, BootStrap, React, Mongo
+## Change Log
+01-23-2023 - Scaffolding and Initial Build
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+## Estimates
+Name of feature: __Initial Build__
+
+Estimate of time needed to complete: __3 Hours__
+
+Start time: __5:00 PM (Eastern Time)__
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+## Credit and Collaborations
