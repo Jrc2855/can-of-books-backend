@@ -17,9 +17,13 @@ app.get('/test', (request, response) => {
   response.status(200).send('test request received')
 })
 
+mongoose.connect(process.env.DB_URL);
 
-
-
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+  console.log('Mongoose is connected');
+});
 
 app.get('*', (request,response)=> {
   response.status(404).send('Not Available');
