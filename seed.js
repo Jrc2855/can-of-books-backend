@@ -11,7 +11,8 @@ async function seed() {
   await Book.create({
     title: 'The Hobbit',
     description: 'They have taken the hobbits to Isenguard',
-    status: 'available'
+    status: 'available',
+    image: 'bookIMG.jpg'
   });
 
   console.log('The Hobbit was created!');
@@ -20,6 +21,8 @@ async function seed() {
     title: 'The Alchemist',
     description: 'Maktub',
     status: 'available',
+    image: 'bookIMG.jpg'
+
   });
 
   console.log('The Alchemist was created');
@@ -28,6 +31,8 @@ async function seed() {
     title: 'Romeo and Juliet',
     description: 'Romeo and Juliet are deceased',
     status: 'unavailable',
+    image: 'bookIMG.jpg'
+
   });
 
   console.log('Romeo and Juliet was created');
