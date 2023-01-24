@@ -1,4 +1,3 @@
-// Title, Description, Status
 'use strict';
 const mongoose = require('mongoose');
 

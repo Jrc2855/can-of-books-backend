@@ -8,11 +8,6 @@ mongoose.connect(process.env.DB_URL);
 const Book = require('./models/books.js');
 
 async function seed() {
-  // **name: {type: String, required: true},
-  // **color: {type: String, required: true},
-  // **spayNeuter: {type: Boolean, required: true},
-  // **location: {type: String, required: true}
-  // Update Book.create with relevant info
   await Book.create({
     title: 'The Hobbit',
     description: 'They have taken the hobbits to Isenguard',
