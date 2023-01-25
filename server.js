@@ -21,6 +21,9 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   console.log('Mongoose is connected');
 });
+
+
+
 //-----ENDPOINTS-----//
 app.get('/', (request, response) => {
   response.status(200).send('Backend Successfully Running')
@@ -40,6 +43,18 @@ async function getBooks(request, response, next) {
   }
 }
 
+// ***** This Endpoint Creates a new book *****
+app.post('/books', postBook);
+async function postBook(request, response, next) {
+  try{
+    let createdBook = await Book.create(request.body);
+    response.status(200).send(createdBook);
+  } catch(error) {
+    console.log(error.message);
+    next(error);
+  }
+}
+
 // ****** This Endpoint deletes a book ******
 app.delete('/books/:bookId', deleteBook);
 async function deleteBook(request, response, next) {
@@ -53,6 +68,7 @@ async function deleteBook(request, response, next) {
   }
 }
 
+
 // *****This Endpoint Creates a new book *****
 app.post('/books', postBook);
 async function postBook(request, response, next) {
@@ -64,6 +80,8 @@ async function postBook(request, response, next) {
     next(error);
   }
 }
+
+
 
 // *****ENDPOINT TO UPDATE/PUT A BOOK *****//
 app.put('/books/:bookID', updateBook);
