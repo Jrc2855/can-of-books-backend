@@ -40,6 +40,35 @@ async function getBooks(request, response, next) {
   }
 }
 
+// ****** This Endpoint deletes a book ******
+app.delete('/books/:bookId', deleteBook);
+async function deleteBook(request, response, next) {
+  try {
+    let id = request.params.bookId;
+    await Book.findByIdAndDelete(id);
+    response.status(200).send('Book Deleted');
+  } catch(error){
+    console.log(error.message);
+    next(error);
+  } 
+}
+
+// *****This Endpoint Creates a new book *****
+app.post('/books', postBook);
+async function postBook(request, response, next) {
+  try{
+    let createdBook = await Book.create(request.body);
+    response.status(200).send(createdBook);
+  } catch(error) {
+    console.log(error.message);
+    next(error);
+  }
+}
+
+
+
+
+
 app.get('*', (request, response) => {
   response.status(404).send('Error 404');
 });
